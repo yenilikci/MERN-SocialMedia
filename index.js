@@ -6,6 +6,9 @@ const dotenv = require('dotenv')
 const helmet = require('helmet')
 const morgan = require('morgan')
 
+const userRoute = require('./routes/users')
+const authRoute = require('./routes/auth')
+
 dotenv.config()
 
 //database connect
@@ -17,6 +20,9 @@ mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true,useUnifiedTopology:
 app.use(express.json()) //body parser
 app.use(helmet())
 app.use(morgan("common"))
+//middleware - routes
+app.use("/api/users",userRoute)
+app.use("/api/auth",authRoute)
 
 app.get('/',(req,res) => {
     res.send('welcome to homepage')
