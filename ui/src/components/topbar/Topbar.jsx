@@ -6,11 +6,11 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo">Sosyal Melih</span>
+        <span className="logo">Social Melih</span>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
-          <Search />
+          <Search style={{ fontSize: 20, marginLeft: 10 }} />
           <input
             placeholder="Search for friend, post or video"
             className="searchInput"
