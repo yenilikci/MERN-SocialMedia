@@ -12,7 +12,7 @@ import {
   School,
 } from "@material-ui/icons";
 import { Users } from "../../dummyData";
-import CloseFriends from "../closeFriend/CloseFriends";
+import CloseFriend from "../closeFriend/CloseFriend";
 
 export default function Sidebar() {
   return (
@@ -60,7 +60,7 @@ export default function Sidebar() {
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
           {Users.map((u) => (
-            <CloseFriends key={u.id} user={u} />
+            <CloseFriend key={u.id} user={u} />
           ))};
         </ul>
       </div>
