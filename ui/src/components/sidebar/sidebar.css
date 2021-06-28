@@ -2,6 +2,8 @@
   flex: 3.5;
   height: calc(100vh-50px); /*topbar yüksekliğini çıkardık*/
   overflow-y: scroll;
+  position: sticky;
+  top: 50px;
 }
 
 ::-webkit-scrollbar {
@@ -13,6 +15,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: rgb(179, 179, 179);
 }
+
 
 .sidebarWrapper {
   padding: 20px;
